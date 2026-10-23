@@ -12,7 +12,12 @@ public class DateChecker {
     }
 
     /**
-     * @return true if the month has 31 days
+     * Returns whether the given month has 31 days.
+     * February returns false because this method only models 31-day months.
+     *
+     * @param month the month to check; must not be null
+     * @return true for January, March, May, July, August, October, and December
+     * @throws IllegalArgumentException if month is null
      */
     public boolean has31Days(Month month) {
         if (month == null) {
