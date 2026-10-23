@@ -1,0 +1,10 @@
+# TDD Reflection
+Most of the first failures were missing symbols for methods such as sum or has31Days. This basically told me that the test wanted code that didn't exist yet so the next move was to write the method. February stood out because I believe that it actually compiled but gave the wrong result. The null month test was the one that caught me off guard the most with how it threw a NullPointerException instead of the exception that I had expected. I put the multiply tests together in one commit and the divide ones in another since they felt like they would be similar enough. Looking back I think that splitting them would have made each of the steps clearer with my committing. One test per commit would probably be more exact in showing exactly what changed and why.
+
+
+
+One interesting observation was that in ea710ec, has31Days started by just returning true for everything and the test still passed. It was not actually correct and it just covered what was checked so far with the tests. The next Red test checked a month that should return false so I had to write logic out. And the early Green wasn't wrong but it wasn't the full picture, but I wasn't able to know this until we had a new failing test.
+
+The later parameterized tests in cedf153 passed right away because has31Days already handled of our 12 months, which simplified things more. Because of this, there didn't need to be any Green step, because there was nothing left to have to even make pass. February was the one that actually forced a change. The null case ended up driving to a new validation.
+
+The TDD process was important in seeing how failing tests point out what is missing or broken before you touch the code and make your own changes. Passing tests only check what you wrote tests for and not really just that it's all correct. For next time I would try smaller commits so it is easier to follow which test led to which fix. Some parts still feel a bit unclear when I do look back at the history.
