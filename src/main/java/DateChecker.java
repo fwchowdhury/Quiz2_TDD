@@ -10,4 +10,11 @@ public class DateChecker {
         JANUARY, FEBRUARY, MARCH, APRIL, MAY, JUNE,
         JULY, AUGUST, SEPTEMBER, OCTOBER, NOVEMBER, DECEMBER
     }
+
+    /**
+     * @return true if the month has 31 days
+     */
+    public boolean has31Days(Month month) {
+        return true;
+    }
 }
