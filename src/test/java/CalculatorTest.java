@@ -19,4 +19,25 @@ public class CalculatorTest {
         int actual = calculator.subtract(1, 2);
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void testMultiply() {
+        int expected = 6;
+        int actual = calculator.multiply(2, 3);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testMultiplyByZero() {
+        int expected = 0;
+        int actual = calculator.multiply(5, 0);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testMultiplyNegative() {
+        int expected = -6;
+        int actual = calculator.multiply(-2, 3);
+        assertEquals(expected, actual);
+    }
 }
